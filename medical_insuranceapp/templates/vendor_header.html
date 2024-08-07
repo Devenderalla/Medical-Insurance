@@ -1,0 +1,48 @@
+{% load static %}
+<header id="header">
+
+		    <div class="container main-menu">
+		    	<div class="row align-items-center justify-content-between d-flex">
+			      <div id="logo">
+			        <a href=""><h2 style="color:white;">Medical Insurance</h2></a>
+			      </div>
+			      <nav id="nav-menu-container">
+			        <ul class="nav-menu">
+			          <li><a href="{% url 'vendor_home' %}">Home</a></li>
+<!--						<li><a href="{% url 'add_packages' %}">Add Packages</a></li>-->
+
+<!--						<li><a href="{% url 'vendor_view_packages' %}">View Packages</a></li>-->
+<!--						<li><a href="{% url 'vendor_view_buys' %}">Orders</a></li>-->
+<!--						<li><a href="{% url 'vendor_change_password' %}">Change Password</a></li>-->
+<!--						<li><a href="{% url 'cashless_hospitals' %}">Cashless Hospitals</a></li>-->
+<!--						<li><a href="{% url 'vendor_view_hospital' %}">Vendor View</a></li>-->
+<!--						<li><a href="{% url 'vendor_profile' %}">Profile</a></li>-->
+<!--						<li><a href="{% url 'vendor_logout' %}">Log out</a></li>-->
+
+						<li class="menu-has-children"><a href="">Packages</a>
+			            <ul>
+			              <li><a href="{% url 'add_packages' %}">Add Packages</a></li>
+							<li><a href="{% url 'vendor_view_packages' %}">View Packages</a></li>
+			              <li><a href="{% url 'vendor_view_buys' %}">Orders</a></li>
+			            </ul>
+			          </li>
+						<li class="menu-has-children"><a href="">Hospitals</a>
+			            <ul>
+			              <li><a href="{% url 'cashless_hospitals' %}">Cashless Hospitals</a></li>
+			              <li><a href="{% url 'vendor_view_hospital' %}">View Hospitals</a></li>
+			            </ul>
+			          </li>
+<li class="menu-has-children"><a href="">Profile</a>
+			            <ul>
+			              <li><a href="{% url 'vendor_profile' %}">Profile</a></li>
+							<li><a href="{% url 'vendor_change_password' %}">Change Password</a></li>
+			              <li><a href="{% url 'vendor_logout' %}">Log out</a></li>
+			            </ul>
+			          </li>
+					</ul>
+			          </li>
+
+			      </nav>
+		    	</div>
+		    </div>
+		  </header>

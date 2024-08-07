@@ -1,0 +1,157 @@
+	<!DOCTYPE html>
+	<html lang="zxx" class="no-js">
+	{% load static %}
+	<head>
+		<!-- Mobile Specific Meta -->
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<!-- Favicon-->
+		<link rel="shortcut icon" href="{% static 'img/fav.png' %}">
+		<!-- Author Meta -->
+		<meta name="author" content="colorlib">
+		<!-- Meta Description -->
+		<meta name="description" content="">
+		<!-- Meta Keyword -->
+		<meta name="keywords" content="">
+		<!-- meta character set -->
+		<meta charset="UTF-8">
+		<!-- Site Title -->
+		<title>Medical</title>
+
+		<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet">
+			<!--
+			CSS
+			============================================= -->
+			<link rel="stylesheet" href="{% static 'css/linearicons.css' %}">
+			<link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}">
+			<link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+			<link rel="stylesheet" href="{% static 'css/magnific-popup.css' %}">
+			<link rel="stylesheet" href="{% static 'css/jquery-ui.css' %}">
+			<link rel="stylesheet" href="{% static 'css/nice-select.css' %}">
+			<link rel="stylesheet" href="{% static 'css/animate.min.css' %}">
+			<link rel="stylesheet" href="{% static 'css/owl.carousel.css' %}">
+			<link rel="stylesheet" href="{% static 'css/jquery-ui.css' %}">
+			<link rel="stylesheet" href="{% static 'css/main.css' %}">
+		</head>
+		<body>
+		{% include 'vendor_header.html' %}
+<!--		  <header id="header">-->
+<!--	  		<div class="header-top">-->
+<!--	  			<div class="container">-->
+<!--			  		<div class="row align-items-center">-->
+<!--			  			<div class="col-lg-6 col-sm-6 col-4 header-top-left">-->
+<!--			  				<a href="tel:+9530123654896"><span class="lnr lnr-phone-handset"></span> <span class="text"><span class="text">+953 012 3654 896</span></span></a>-->
+<!--				  			<a href="mailto:support@colorlib.com"><span class="lnr lnr-envelope"></span> <span class="text"><span class="text">support@colorlib.com</span></span></a>			-->
+<!--			  			</div>-->
+<!--			  			<div class="col-lg-6 col-sm-6 col-8 header-top-right">-->
+<!--							<a href="#" class="primary-btn text-uppercase">Book Appointment</a>-->
+<!--			  			</div>-->
+<!--			  		</div>			  					-->
+<!--	  			</div>-->
+<!--			</div>-->
+<!--		    <div class="container main-menu">-->
+<!--		    	<div class="row align-items-center justify-content-between d-flex">-->
+<!--			      <div id="logo">-->
+<!--			        <a href="index.html"><img src="{% static 'img/logo.png' %}" alt="" title="" /></a>-->
+<!--			      </div>-->
+<!--			      <nav id="nav-menu-container">-->
+<!--			        <ul class="nav-menu">-->
+<!--			          <li><a href="index.html">Home</a></li>-->
+<!--			          <li><a href="about.html">About</a></li>-->
+<!--			          <li><a href="features.html">Features</a></li>-->
+<!--			          <li><a href="doctors.html">Doctors</a></li>-->
+<!--			          <li><a href="departments.html">Departments</a></li>-->
+<!--			          <li class="menu-has-children"><a href="">Blog</a>-->
+<!--			            <ul>-->
+<!--			              <li><a href="blog-home.html">Blog Home</a></li>-->
+<!--			              <li><a href="blog-single.html">Blog Single</a></li>-->
+<!--			            </ul>-->
+<!--			          </li>	-->
+<!--			          <li class="menu-has-children"><a href="">Pages</a>-->
+<!--			            <ul>-->
+<!--			            	  <li><a href="elements.html">Elements</a></li>-->
+<!--			            	  <li><a href="#">Item One</a></li>-->
+<!--			            	  <li><a href="#">Item Two</a></li>-->
+<!--					          <li class="menu-has-children"><a href="">Level 2 </a>-->
+<!--					            <ul>-->
+<!--					              <li><a href="#">Item One</a></li>-->
+<!--					              <li><a href="#">Item Two</a></li>-->
+<!--					            </ul>-->
+<!--					          </li>					                		-->
+<!--			            </ul>-->
+<!--			          </li>					          					          		          -->
+<!--			          <li><a href="contact.html">Contact</a></li>-->
+<!--			        </ul>-->
+<!--			      </nav>&lt;!&ndash; #nav-menu-container &ndash;&gt;		    		-->
+<!--		    	</div>-->
+<!--		    </div>-->
+<!--		  </header>&lt;!&ndash; #header &ndash;&gt;-->
+
+			<!-- start banner Area -->
+			<section class="banner-area relative about-banner" id="home">
+				<div class="overlay overlay-bg"></div>
+				<div class="container">
+					<div class="row d-flex align-items-center justify-content-center">
+						<div class="about-content col-lg-12">
+							<h1 class="text-white">
+								Hospitals
+							</h1>
+							<p class="text-white link-nav"><a href="">Home </a>  <span class="lnr lnr-arrow-right"></span>  <a href=""> Hospitals</a></p>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- End banner Area -->
+
+			<!-- Start contact-page Area -->
+			<section class="contact-page-area section-gap">
+
+						<div class="col-lg-8">
+							<form method="post" action="">
+								{% csrf_token %}
+								<div class="row">
+									<div class="col-lg-6 form-group">
+
+										<input name="email" placeholder="Enter Hospital Name" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Hospital name'" class="common-input mb-20 form-control" required="" type="email" value="{{email}}" readonly>
+										<input name="hospital_name" placeholder="Enter Hospital Name" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Hospital name'" class="common-input mb-20 form-control" required="" type="text">
+
+										<input name="location" placeholder="Enter Location"  onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Location'" class="common-input mb-20 form-control" required="" type="text">
+
+										<input name="address" placeholder="Enter Address" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Address'" class="common-input mb-20 form-control" required="" type="text">
+                                        <input name="contact_number" placeholder="Enter Contact Number" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Contact'" class="common-input mb-20 form-control" required="" type="number">
+                                        <input name="website" placeholder="Enter Website" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Website'" class="common-input mb-20 form-control" required="" type="text">
+                                        <input name="services" placeholder="Enter Services" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Services'" class="common-input mb-20 form-control" required="" type="text">
+									</div>
+
+									<div class="col-lg-12">
+										<div class="alert-msg" style="text-align: left;"></div>
+										<button class="genric-btn primary" style="float: left;">Add</button>
+									</div>
+								</div>
+							</form>
+							{{msg}}
+						</div>
+					</div>
+				</div>
+			</section>
+
+		{% include 'footer.html' %}
+			<!-- End footer Area -->
+
+
+			<script src="{% static 'js/vendor/jquery-2.2.4.min.js' %}"></script>
+			<script src="{% static 'js/popper.min.js' %}"></script>
+			<script src="{% static 'js/vendor/bootstrap.min.js' %}"></script>
+			<script src="{% static 'https://maps.googleapis.com/maps/api/js?key=AIzaSyBhOdIF3Y9382fqJYt5I_sswSrEw5eihAA' %}"></script>
+ 			<script src="{% static 'js/jquery-ui.js' %}"></script>
+  			<script src="{% static 'js/easing.min.js' %}"></script>
+			<script src="{% static 'js/hoverIntent.js' %}"></script>
+			<script src="{% static 'js/superfish.min.js' %}"></script>
+			<script src="{% static 'js/jquery.ajaxchimp.min.js' %}"></script>
+			<script src="{% static 'js/jquery.magnific-popup.min.js' %}"></script>
+    		<script src="{% static 'js/jquery.tabs.min.js' %}"></script>
+			<script src="{% static 'js/jquery.nice-select.min.js' %}"></script>
+			<script src="{% static 'js/owl.carousel.min.js' %}"></script>
+			<script src="{% static 'js/mail-script.js' %}"></script>
+			<script src="{% static 'js/main.js' %}"></script>
+		</body>
+	</html>
